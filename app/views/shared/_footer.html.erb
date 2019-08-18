@@ -1,0 +1,65 @@
+<div class="card bg-light mb-0">
+  <div class="card-header text-center h4 text-danger color-link-reset">
+      
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" arial-label="facebook" "><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true" ></i></a>
+      <a href="http://www.twitter.com‎/" target="_blank" rel="noopener"><i class="fab fa-twitter-square" aria-hidden="true"></i></a>
+
+
+      <%= link_to '<i class="fab fa-youtube" aria-hidden="true"></i>'.html_safe, 'https://www.youtube.com/', target: '_blank', rel: "noopener"  %>
+      
+      <%= link_to '<i class="fab fa-github" aria-hidden="true"></i>'.html_safe, 'https://github.com‎/', target: '_black', rel: "noopener"  %>
+      <%= link_to '<i class="fab fa-slack" aria-hidden="true"></i>'.html_safe, 'https://slack.com/', target: '_blank', rel: "noopener"  %>
+  </div>
+
+
+  
+  <div class="card-group">
+    <div class="card">
+      <div class="row no-gutters">
+        <div class="col-md-6 ">
+          <div class="card-body">
+            <!-- 4:3 aspect ratio -->
+            <div class="embed-responsive embed-responsive-4by3 border border-danger">
+              <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d407.92554003013714!2d-70.63469412579546!3d-33.4411974427703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1b8a92ab14abf654!2sDesaf%C3%ADo+Latam+-+Sede+Baquedano!5e0!3m2!1sen!2scl!4v1565644773946!5m2!1sen!2scl" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card-body">
+            <h5 class="card-title">Defio Latam</h5>
+            <p class="card-text">
+              Address:
+              <br>
+              Rebeca Matte 18, Santiago, Región Metropolitana
+              <br>
+              Chile <%= image_tag ('chile-flag.png')  %>
+            </p>
+            <p class="text-success h4" >
+                <i class="fab fa-whatsapp"></i> +56 9 5117 7975
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Links de Interes: </h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><%= link_to 'getbootstrap.com', 'https://getbootstrap.com/', target: '_blank', rel: "noopener" %></li>
+          <li class="list-group-item"><%= link_to 'w3schools.com', 'https://www.w3schools.com/', target: '_blank', rel: "noopener" %></li>
+          <li class="list-group-item"><%= link_to 'rubyonrails.org', 'https://guides.rubyonrails.org/', target: '_blank', rel: "noopener" %></li>
+          <li class="list-group-item"><%= link_to 'fontawesome.com', 'https://fontawesome.com/', target: '_blank', rel: "noopener" %></li>
+        </ul>
+        <br>
+        <p class="card-text"><small class="text-muted">Simplemente si se puede</small></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="card-footer bg-transparent text-center">
+    <p>This website is for educational use only by Guillermo Gibson</p>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.myfont{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.myfont-title{
+    font-family: 'Permanent Marker', cursive;
+}
+
+.myfont-curse{
+    font-family: 'Dancing Script', cursive;
+}
+
+.myfont-p{
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 2rem;
+}
+
+.myfont-letter{
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 1.5rem;
+}
+
+div.color-link-reset a{
+    color: inherit !important;
+}
