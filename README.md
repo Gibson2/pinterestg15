@@ -2,6 +2,8 @@
 
 Proyecto tipo Vista-Controlador (VC), para practicar HTML, CSS, Bootstarp, GitHub
 
+* Github repository: https://gibson2.github.io/pinterestg15/
+
 * Ruby version: 2.6.3p62
 
 * Rails version: rails 5.2.3
