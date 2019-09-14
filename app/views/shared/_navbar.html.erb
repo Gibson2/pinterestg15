@@ -17,13 +17,23 @@
         <li class="nav-item">
             <%= link_to "Contact", pages_contact_path, class: 'nav-link' %>
         </li>
+        <li class="nav-item">
+            <%= link_to "Pins", pins_path, class: 'nav-link' %>
+        </li>
     </ul>
 
     <ul class="navbar-nav justify-content-end mr-3">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle h4" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user-circle text-danger"></i>
-                <%= Faker::Name.first_name %>
+                <% if user_signed_in?%>
+                    <%= image_tag current_user.avatar, class: 'img-thumbnail', style:'max-width: 50px' %>
+                    <%= current_user.name %>
+                    /
+                    <%= current_user.email %>
+                <% else %>
+                    <i class="fas fa-user-circle text-danger"></i>
+                    <p> Registrate !!! YA </p>
+                <% end %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#"><i class="fas fa-user-edit text-danger"></i>  Editar</a>
@@ -31,6 +41,21 @@
                 <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt text-danger"></i>  Salir</a>
             </div>
         </li>
+    </ul>
+
+    <ul class="navbar-nav mr-auto">
+      <%  unless user_signed_in? %>
+          <li class="nav-item">
+              <%= link_to "Registro", new_user_registration_path, class: "btn btn-primary btn-md navbar-btn", role: "button" %>
+          </li>
+          <li class="nav-item">
+              <%= link_to "Ingresar", user_session_path, class: "btn btn-primary btn-md navbar-btn", role: "button" %>
+          </li>
+      <% else %>
+          <li class="nav-item">
+              <%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class: "btn btn-primary navbar-btn", role: "button" %>
+          </li>
+      <% end %>
     </ul>
 
 

@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+
+10.times do |i|
+    u = User.create!(
+        name: Faker::Twitter.screen_name,
+        email: "#{i + 1}@gmail.com",
+        password: '123456',
+        avatar: Faker::Avatar.image,
+    ) 
+end
